@@ -33,6 +33,28 @@ body {
     font-size: 3.5rem;
 }
 
+legend{
+    color: darkgreen;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+fieldset{
+    border: 1px solid darkgreen;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+label{
+    display: block;
+    padding: 0.5rem;
+}
+
+textarea{
+    resize: none;
+}
 #contact-button{
     border: none;
     background-color: darkgreen;
@@ -44,7 +66,7 @@ body {
     font-size: 1rem;
 }
 
-input[type="text"], input[type="email"]{
+input[type="text"], input[type="email"], select, textarea{
     width: 100%;
     border: 1px solid darkgreen;
     border-radius: .25rem;

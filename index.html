@@ -14,7 +14,7 @@
         <div id="header">
             <img src="Images/Tony.png" alt="Trustworthy Pizza Guy">
             <h1>Tony's Not a Front Pizza!</h1>
-            <h2>We're glad you are here!</h2>
+            <h2>We could use a reliable guy like you!</h2>
             <hr>
             <p>The most reputable pizza parlor in town. Visit us for all of your "needs"</p>
             <a id="contact-button" href="#" role="button">Contact Us</a>
@@ -46,7 +46,41 @@
                     delivery
                 </label>
              </fieldset>
-             <button type="submit" id="order-button">Place Order</button>
+
+            <!-- Select Toppings -->
+             <fieldset>
+                <legend>Select Toppings</legend>
+                <label for="pepperoni">
+                    <input type="checkbox" id="pepperoni" name="Toppings[]" value="pepperoni">
+                    Pepperoni
+                </label>
+                <label for="sausage">
+                    <input type="checkbox" id="sausage" name="Toppings[]" value="sausage">
+                    Sausage
+                </label>
+                <label for="bacon">
+                    <input type="checkbox" id="bacon" name="Toppings[]" value="bacon">
+                    Bacon
+                </label>
+             </fieldset>
+            <!-- Select Pizza Size -->
+             <fieldset>
+                <legend>Select Pizza Size</legend>
+                <select id="size" name="size">
+                    <option value="none">-- Select a Size --</option>
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+             </fieldset>
+
+            <!-- Comment Field -->
+             <label for="comment">Comments</label>
+             <textarea rows="5" id="comment" name="comment"></textarea>
+
+            <button type="submit" id="order-button">Place Order</button>
+
+            
         </form>
     </div>
 </body>
