@@ -3,7 +3,7 @@ document.getElementById("pizza-form").onsubmit = () => {
     let lname = document.getElementById("lname").value.trim();
     let email = document.getElementById("email").value.trim();
     let isValid = true;
-
+    clearErrors();
     
     if (fname == ""){
         document.getElementById("err-fname").style.display = "block";
@@ -25,9 +25,10 @@ document.getElementById("pizza-form").onsubmit = () => {
 };
 
 function clearErrors(){
-    let errors = document.getElementById("err");
-    for (let i=0; i<error.length; i++){
+    let errors = document.getElementsByClassName("err");
+    for (let i=0; i<errors.length; i++){
         errors[i].style.display = "none"
     }
+    isValid = true;
 }
 
