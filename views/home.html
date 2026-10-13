@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/pizza-styles.css">
+    <!-- Javascript -->
+    <script src="scripts/pizza.js" defer></script>
     <title>Tony's Not a Front Pizza</title>
 
     <!-- Favicon -->
@@ -26,12 +29,15 @@
                 <legend>Contact Info</legend>
                 <label for="fname">First Name: </label>
                 <input type="text" id="fname" name="fname">
+                <span class="err" id="err-fname">First name is required</span>
 
                 <label for="lname">Last Name: </label>
                 <input type="text" id="lname" name="lname">
+                <span class="err" id="err-lname">Last name is required</span>
 
                 <label for="email">Email: </label>
                 <input type="email" id="email" name="email">
+                <span class="err" id="err-email">Email is required</span>
 
              </fieldset>
             <!-- Pickup or Delivery -->

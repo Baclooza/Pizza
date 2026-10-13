@@ -8,6 +8,11 @@ body {
     font-family: Times New Roman, Times, serif;
 }
 
+.err{
+    color: darkred;
+    display: none;
+}
+
 #main {
     background-color: white;
     width: 70%;
