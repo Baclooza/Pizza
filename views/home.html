@@ -15,7 +15,7 @@
 <body>
     <div id="main">
         <div id="header">
-            <img src="Images/Tony.png" alt="Trustworthy Pizza Guy">
+            <img src="images/Tony.png" alt="Trustworthy Pizza Guy">
             <h1>Tony's Not a Front Pizza!</h1>
             <h2>We could use a reliable guy like you!</h2>
             <hr>
@@ -43,6 +43,7 @@
             <!-- Pickup or Delivery -->
              <fieldset>
                 <legend>Select Pickup or Delivery</legend>
+                <span class="err" id="err-method">Select Pickup or Delivery</span>
                 <label for="pickup">
                     <input type="radio" id="pickup" name="method" value="pickup">
                     pickup
@@ -56,6 +57,7 @@
             <!-- Select Toppings -->
              <fieldset>
                 <legend>Select Toppings</legend>
+                <span class="err" id="err-method">Select Pickup or Delivery</span>
                 <label for="pepperoni">
                     <input type="checkbox" id="pepperoni" name="Toppings[]" value="pepperoni">
                     Pepperoni
@@ -72,6 +74,8 @@
             <!-- Select Pizza Size -->
              <fieldset>
                 <legend>Select Pizza Size</legend>
+
+                <span class="err" id="err-size">Please Select Pizza Size</span>
                 <select id="size" name="size">
                     <option value="none">-- Select a Size --</option>
                     <option value="small">small</option>
