@@ -42,7 +42,7 @@ document.getElementById("pizza-form").onsubmit = () => {
 
     // Validate size
     let size = document.getElementById('size').value;
-    if (size === "none") {
+    if (size == "none") {
         document.getElementById("err-size").style.display = "block";
         isValid = false;
     }
