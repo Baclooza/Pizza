@@ -1,80 +1,82 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--primary);
-    margin: 0;
-    font-family: Times New Roman, Times, serif;
+  background-color: var(--primary);
+  margin: 0;
+  font-family:
+    Times New Roman,
+    Times,
+    serif;
 }
 
-.err{
-    color: var(--primary);
-    display: none;
+.err {
+  color: var(--primary);
+  display: none;
 }
 
 #main {
-    background-color: var(--secondary);
-    width: 70%;
-    margin: 0 auto;
-    padding: 0 1rem 2rem 1rem;
+  background-color: var(--secondary);
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
 }
 
-#header{
-    background-color: var(--contrast);
-    border-radius: .25rem;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+header {
+  background-color: var(--contrast);
+  border-radius: 0.25rem;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
 }
 
-#header img{
-    max-width: 175px;
-    float: right;
+header img {
+  max-width: 175px;
+  float: right;
 }
 
-#header h1{
-    font-weight: 600;
-    color: darkgreen;
-    font-size: 3.5rem;
+header h1 {
+  font-weight: 600;
+  color: darkgreen;
+  font-size: 3.5rem;
 }
 
-legend{
-    color: darkgreen;
-    font-variant: small-caps;
-    font-size: 1.5rem;
-    padding-left: 1rem;
-    width: 100%;
+legend {
+  color: darkgreen;
+  font-variant: small-caps;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  width: 100%;
 }
 
-fieldset{
-    border: 1px solid darkgreen;
-    padding: 1rem;
-    margin-bottom: 1.25rem;
+fieldset {
+  border: 1px solid darkgreen;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-label{
-    display: block;
-    padding: 0.5rem;
+label {
+  display: block;
+  padding: 0.5rem;
 }
 
-textarea{
-    resize: none;
-}
-#contact-button{
-    border: none;
-    background-color: darkgreen;
-    border-color: darkgreen;
-    padding: .5rem .75rem;
-    border-radius: .25rem;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
+textarea {
+  resize: none;
 }
 
-input[type="text"], input[type="email"], select, textarea{
-    width: 100%;
-    border: 1px solid darkgreen;
-    border-radius: .25rem;
-    margin: 0rem 0rem 1rem 0rem;
-    padding: .75rem;
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  border: 1px solid darkgreen;
+  border-radius: 0.25rem;
+  margin: 0rem 0rem 1rem 0rem;
+  padding: 0.75rem;
+}
+
+form .button,
+header .button {
+  display: flex;
+  justify-self: center;
 }

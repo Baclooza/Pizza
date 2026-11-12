@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('partials/head.ejs', {title: "Conformation"}) %>
+    <%- include('partials/head', {title: "Conformation"}) %>
   </head>
   <body>
     <h1>Thank you for your order, <%= order.fname %>!</h1>
@@ -14,5 +14,7 @@
     <p>Size: <%= order.size %></p>
     <p>Comment: <%= order.comment %></p>
     <p>Date and Time <%= order.timestamp %></p>
+
+    <a href="/" class="button">Order another?</a>
   </body>
 </html>

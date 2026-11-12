@@ -1,19 +1,30 @@
 :root {
-    --primary: darkred;
-    --secondary: white;
-    --contrast: lightgray;
+  --primary: darkred;
+  --secondary: white;
+  --contrast: lightgray;
+}
+
+/* General Changes */
+.button {
+  border: none;
+  background-color: darkgreen;
+  border-color: darkgreen;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
 }
 
 /* Footer */
 footer {
-    padding-top: 1rem;
+  padding-top: 1rem;
 }
 footer div {
-    display: flex;
-    justify-content: center;
-    justify-self: center;
-    background-color: var(--secondary);
-    border-radius: 1rem;
-    padding: .5rem;
-    
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
