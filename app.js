@@ -74,11 +74,14 @@ app.get("/confirm-order", (req, res) => {
 });
 
 // Add a route to process a pizza order
-app.post("/submit-order", async(req, res) => {
+app.post("/submit-order", async (req, res) => {
   // Create a JSON object to store order data
   const order = req.body;
-
   console.log(order);
+
+  // Convert toppings array to a comma-delimited string
+  order.toppings = Array.isArray(order.toppings) ?
+    order.toppings.join(", ") : "";
 
   // Define a SQL query to INSERT a new order
   const sql = `INSERT INTO orders (fname, lname, email, size, method, toppings, comment)
@@ -98,6 +101,10 @@ app.post("/submit-order", async(req, res) => {
   // Execute the query
   const [result] = await pool.execute(sql, params);
 
+  // Get the id from the newly constructed rows
+  order.id = result.insertId;
+  console.log("A new row was inserted with ID" + order.id);
+
   // Display the confirmation page
   res.render("confirm", { order });
 });
@@ -106,20 +113,21 @@ app.post("/submit-order", async(req, res) => {
 app.get("/admin", async (req, res) => {
   // try/catch block for error handling
   try {
-    const orders = await pool.query("SELECT * FROM orders");
+    const [orders] = await pool.query(
+      "SELECT * FROM orders ORDER BY timestamp DESC",
+    );
 
     // Send the orders data back to the browser as JSON
-    console.log(orders[0]);
+    console.log(orders);
 
     // Render the admin page
-    res.render("admin", { orders: orders[0] });
+    res.render("admin", { orders });
   } catch (err) {
     // If ANY error happened in the 'try' block, this code runs
     // Log the error to the server console (for developers to see)
     console.error("Database error occured");
 
-    // Send an error response to the browser
-    // status(500) means "Internal Server Error"
+    // Send an error response to the browser status(500) means "Internal Server Error"
     res.status(500).send("Database error: " + err.message);
   }
 });

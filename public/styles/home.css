@@ -3,25 +3,25 @@
 }
 
 body {
-    background-color: darkred;
+    background-color: var(--primary);
     margin: 0;
     font-family: Times New Roman, Times, serif;
 }
 
 .err{
-    color: darkred;
+    color: var(--primary);
     display: none;
 }
 
 #main {
-    background-color: white;
+    background-color: var(--secondary);
     width: 70%;
     margin: 0 auto;
     padding: 0 1rem 2rem 1rem;
 }
 
 #header{
-    background-color: lightgray;
+    background-color: var(--contrast);
     border-radius: .25rem;
     padding: 2rem 1rem;
     margin-bottom: 2rem;

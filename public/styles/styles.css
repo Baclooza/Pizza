@@ -1,0 +1,19 @@
+:root {
+    --primary: darkred;
+    --secondary: white;
+    --contrast: lightgray;
+}
+
+/* Footer */
+footer {
+    padding-top: 1rem;
+}
+footer div {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background-color: var(--secondary);
+    border-radius: 1rem;
+    padding: .5rem;
+    
+}

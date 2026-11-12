@@ -1,16 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles/pizza-styles.css" />
+    <%- include('partials/head.ejs', {title: "Tony's Not a Front Pizza"}) %>
+    <link rel="stylesheet" href="styles/home.css">
     <!-- Javascript -->
     <script src="scripts/pizza.js" defer></script>
-    <title>Tony's Not a Front Pizza</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="images/PizzaIcon.jpg" />
   </head>
   <body>
     <div id="main">
@@ -102,5 +96,6 @@
         <button type="submit" id="order-button">Place Order</button>
       </form>
     </div>
+    <%- include('partials/footer') %>
   </body>
 </html>
