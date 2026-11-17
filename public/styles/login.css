@@ -1,0 +1,5 @@
+h1 {
+    display: flex;
+    justify-self: center;
+    padding-top: 1rem;
+}

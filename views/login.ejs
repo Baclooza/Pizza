@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head', { title: 'Login' }) %>
+  <link rel="stylesheet" href="/styles/login.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>Admin Login</h1>
+
+        <% if (error) { %>
+            <p class="login-error"><%= error %></p>
+        <% } %>
+
+        <form action="/login" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="button">Log In</button>
+        </form>
+    </div>
+</body>
+
+</html>
