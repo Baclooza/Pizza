@@ -11,6 +11,9 @@ dotenv.config();
 // Import express-session
 import session from "express-session";
 
+// Import server-side validation
+import { validateForm } from "./validation.js";
+
 // Create a connection pool
 const pool = mysql2
   .createPool({
@@ -78,7 +81,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Define a default route ("/")
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("home", {errors: ""});
 });
 
 // Add a contact route to display a contact view page
@@ -128,8 +131,15 @@ app.post("/submit-order", async (req, res) => {
   // Create a JSON object to store order data
   const order = req.body;
   order.timestamp = new Date();
-
   console.log(order);
+
+  // Validate the data on the server
+  const valid = validateForm(order);
+  if (!valid.isValid) {
+    console.log(valid);
+    res.render('home', {errors: valid.errors });
+    return;
+  }
 
   // Convert toppings array to a comma-delimited string
   order.toppings = Array.isArray(order.toppings)

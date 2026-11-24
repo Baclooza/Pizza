@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('partials/head', {title: "Conformation"}) %>
-  </head>
-  <body>
+
+<head>
+  <%- include('partials/head', {title: "Conformation"}) %>
+</head>
+
+<body>
+  <div id="main">
     <h1>Thank you for your order, <%= order.fname %>!</h1>
     <h2>Order Summary</h2>
     <p>Order ID: <%= order.id %> </p>
@@ -16,5 +19,7 @@
     <p>Date and Time <%= order.timestamp %></p>
 
     <a href="/" class="button">Order another?</a>
-  </body>
+  </div>
+</body>
+
 </html>

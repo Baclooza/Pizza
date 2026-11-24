@@ -21,6 +21,13 @@
       </p>
       <a class="button" href="/contact-us" role="button">Contact Us</a>
     </header>
+
+    <!-- Display server-side error messages -->
+    <% if (errors) { %>
+    <% errors.forEach(error => { %>
+    <p class="err"><%= error %></p>
+    <% }) %>
+    <% } %>
     <form id="pizza-form" action="/submit-order" method="post">
       <!-- Contact Info -->
       <fieldset>

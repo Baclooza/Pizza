@@ -1,5 +1,5 @@
 header {
-  background-color: var(--contrast);
+  background-color: var(--bg-contrast);
   border-radius: 0.25rem;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -12,6 +12,6 @@ header img {
 
 header h1 {
   font-weight: 600;
-  color: darkgreen;
+  color: var(--contrast);
   font-size: 3.5rem;
 }
